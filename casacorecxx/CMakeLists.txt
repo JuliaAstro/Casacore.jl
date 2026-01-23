@@ -10,13 +10,26 @@ get_filename_component(JlCxx_location ${JlCxx_location} DIRECTORY)
 set(CMAKE_INSTALL_RPATH "$(CMAKE_INSTALL_PREFIX)/lib;$(JLCxx_location)")
 message(STATUS "Found JlCxx at ${JlCxx_location}")
 
-# Find casacore
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
-find_package(Casacore REQUIRED)
-
 # Add our library
 add_library(casacorecxx SHARED
   src/casacorecxx.cpp
+)
+
+target_include_directories(casacorecxx PRIVATE "${CMAKE_INSTALL_PREFIX}/include")
+
+set(CASACORE_LIBRARIES
+    casa_casa
+    casa_coordinates
+    casa_fits
+    casa_images
+    casa_lattices
+    casa_measures
+    casa_mirlib
+    casa_ms
+    casa_msfits
+    casa_scimath
+    casa_scimath_f
+    casa_tables
 )
 
 # Link to JLCxx and of course casa

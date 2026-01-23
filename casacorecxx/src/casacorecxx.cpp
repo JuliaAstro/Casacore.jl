@@ -529,7 +529,7 @@ JLCXX_MODULE define_julia_module(jlcxx::Module &mod) {
         });
 
     mod.method("tableCommand", [](std::string command, std::vector<const Table*> tables) -> Table {
-        return Table(tableCommand(String(command),  tables));
+        return Table(tableCommand(String(command),  tables).table());
     });
 
     /**
