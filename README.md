@@ -2,7 +2,7 @@
 
 [![Test](https://github.com/JuliaAstro/Casacore.jl/actions/workflows/test.yml/badge.svg)](https://github.com/JuliaActions/Casacore.jl/actions/workflows/test.yml)
 
-This package provides a Julia interface to the NRAO Casacore C++ library.
+This package provides a Julia interface to the National Radio Astronomy Observatory (NRAO) Casacore C++ library.
 
 [Casacore](https://casacore.github.io) is a popular library used primarily in radio astronomy. Amongst other things, its tables functionality is used to store and manipulate visibility data, whilst its measures interface allows for conversion between different reference frames based on ephemeris data.
 
