@@ -2,13 +2,13 @@
 
 [![Test](https://github.com/JuliaAstro/Casacore.jl/actions/workflows/test.yml/badge.svg)](https://github.com/JuliaActions/Casacore.jl/actions/workflows/test.yml)
 
-This package provides a Julia interface to the National Radio Astronomy Observatory (NRAO) Casacore C++ library.
+This package provides a Julia interface to the National Radio Astronomy Observatory (NRAO) casacore C++ library.
 
-[Casacore](https://casacore.github.io/casacore/) is a popular library used primarily in radio astronomy. Amongst other things, its tables functionality is used to store and manipulate visibility data, whilst its measures interface allows for conversion between different reference frames based on ephemeris data.
+[casacore](https://casacore.github.io/casacore/) is a popular library used primarily in radio astronomy. Amongst other things, its tables functionality is used to store and manipulate visibility data, whilst its measures interface allows for conversion between different reference frames based on ephemeris data.
 
-The Casacore package depends on the [casacorecxx](https://github.com/JuliaBinaryWrappers/casacorecxx_jll.jl) and [CxxWrap](https://github.com/JuliaInterop/CxxWrap.jl) packages to provide a C interface to the Casacore C++ library.
+The Casacore package depends on the [casacorecxx](https://github.com/JuliaBinaryWrappers/casacorecxx_jll.jl) and [CxxWrap](https://github.com/JuliaInterop/CxxWrap.jl) packages to provide a C interface to the casacore C++ library.
 
-This package is still under development. Because Casacore is a very large library, the Julia interface has been developed with specific use cases in mind, limited by the author's own experience. Issues and pull requests are very welcome to help expand on functionality and use cases.
+This package is still under development. Because casacore is a very large library, the Julia interface has been developed with specific use cases in mind, limited by the author's own experience. Issues and pull requests are very welcome to help expand on functionality and use cases.
 
 ## Installation
 
