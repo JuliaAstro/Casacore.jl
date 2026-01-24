@@ -5,7 +5,7 @@ artifact_toml = joinpath(@__DIR__, "..", "Artifacts.toml")
 
 # create_artifact() returns the content-hash of the artifact directory once we're finished creating it
 measures_hash = create_artifact() do artifact_dir
-    download("ftp://ftp.astron.nl/outgoing/Measures/WSRT_Measures.ztar", joinpath(artifact_dir, "WSRT_Measures.ztar"))
+    download("https://www.astron.nl/iers/WSRT_Measures.ztar", joinpath(artifact_dir, "WSRT_Measures.ztar"))
     cd(artifact_dir) do
         run(`tar -xzf WSRT_Measures.ztar`)
         rm("WSRT_Measures.ztar", force=true)
