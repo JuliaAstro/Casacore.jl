@@ -1,14 +1,14 @@
 # Casacore.jl
 
-[![Test](https://github.com/torrance/Casacore.jl/actions/workflows/test.yml/badge.svg)](https://github.com/JuliaActions/Casacore.jl/actions/workflows/test.yml)
+[![Test](https://github.com/JuliaAstro/Casacore.jl/actions/workflows/test.yml/badge.svg)](https://github.com/JuliaActions/Casacore.jl/actions/workflows/test.yml)
 
-This package provides a high-level interface to use Casacore from Julia.
+This package provides a Julia interface to the NRAO Casacore C++ library.
 
 [Casacore](https://casacore.github.io) is a popular library used primarily in radio astronomy. Amongst other things, its tables functionality is used to store and manipulate visibility data, whilst its measures interface allows for conversion between different reference frames based on ephemeris data.
 
-This package uses [casacorecxx](https://github.com/torrance/casacorecxx) which uses [CxxWrap](https://github.com/JuliaInterop/CxxWrap.jl) to wrap the C++ Casacore codebase. These raw objects and methods are available in `Casacore.LibCasacore`.
+The Casacore package depends on the [casacorecxx](https://github.com/JuliaBinaryWrappers/casacorecxx_jll.jl) and [CxxWrap](https://github.com/JuliaInterop/CxxWrap.jl) packages to provide a C interface to the Casacore C++ library.
 
-This package is under active development. Casacore is a very large package, and this Julia interface has been developed with specific use cases in mind, limited by the author's own experience. Issues and pull requests are very welcome to help expand on functionality and use cases.
+This package is still under development. Because Casacore is a very large library, the Julia interface has been developed with specific use cases in mind, limited by the author's own experience. Issues and pull requests are very welcome to help expand on functionality and use cases.
 
 ## Installation
 
