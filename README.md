@@ -1,6 +1,6 @@
 # Casacore.jl
 
-[![Stable](https://github.com/torrance/Casacore.jl/actions/workflows/stable.yml/badge.svg)](https://github.com/torrance/Casacore.jl/actions/workflows/stable.yml) [![Dev](https://github.com/torrance/Casacore.jl/actions/workflows/dev.yml/badge.svg)](https://github.com/torrance/Casacore.jl/actions/workflows/dev.yml)
+[![Test](https://github.com/torrance/Casacore.jl/actions/workflows/test.yml/badge.svg)](https://github.com/JuliaActions/Casacore.jl/actions/workflows/test.yml)
 
 This package provides a high-level interface to use Casacore from Julia.
 
