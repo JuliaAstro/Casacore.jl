@@ -5,6 +5,9 @@ authors = ["Torrance Hodgson <torrance@pravic.xyz>", "Kiran Shila <me@kiranshila
            "Fergus Baker <fergus@cosroe.com>", "Paul Barrett <pebarrett@gmail.com>"]
 version = "0.4.0"
 
+[workspace]
+projects = ["test"]
+
 [deps]
 CEnum = "fa961155-64e5-5f13-b03f-caf6b980ea82"
 CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
@@ -18,9 +21,3 @@ CEnum = "0.5"
 CxxWrap = "0.17"
 julia = "1.10, 1.11, 1.12"
 Unitful = "1"
-
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
