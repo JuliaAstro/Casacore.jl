@@ -3,7 +3,7 @@ module Tables
 export taql
 
 using ..LibCasacore
-using CEnum
+using CEnum: CEnum, @cenum
 
 @cenum TableOptions begin
     Old=1
