@@ -1,8 +1,8 @@
 module LibCasacore
 
-using casacorecxx_jll
-using CxxWrap
-using Pkg.Artifacts
+using casacorecxx_jll: casacorecxx_jll
+using CxxWrap: CxxWrap, @cxxdereference, @initcxx, @wrapmodule, ConstCxxRef, CxxBool, CxxChar, CxxLongLong, CxxUChar, CxxULongLong, CxxRef
+using Pkg.Artifacts: Artifacts, @artifact_str
 
 @wrapmodule(casacorecxx_jll.get_libcasacorecxx_path)
 

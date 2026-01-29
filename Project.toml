@@ -5,6 +5,9 @@ authors = ["Torrance Hodgson <torrance@pravic.xyz>", "Kiran Shila <me@kiranshila
            "Fergus Baker <fergus@cosroe.com>", "Paul Barrett <pebarrett@gmail.com>"]
 version = "0.4.0"
 
+[workspace]
+projects = ["test"]
+
 [deps]
 CEnum = "fa961155-64e5-5f13-b03f-caf6b980ea82"
 CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
@@ -13,14 +16,9 @@ Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
 casacorecxx_jll = "689e2960-4160-5310-ae7f-2d2095288874"
 
 [compat]
-casacorecxx_jll = "0.4.0"
 CEnum = "0.5"
 CxxWrap = "0.17"
-julia = "1.10, 1.11, 1.12"
+Pkg = "1"
 Unitful = "1"
-
-[extras]
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-
-[targets]
-test = ["Test"]
+casacorecxx_jll = "0.4.0"
+julia = "1.10, 1.11, 1.12"

@@ -1,6 +1,6 @@
 module EarthMagnetics
 
-using CEnum
+using CEnum: CEnum, @cenum
 using Unitful: Unitful as U, ustrip
 
 using ..Measures: AbstractMeasure, _setdata!, Converter
