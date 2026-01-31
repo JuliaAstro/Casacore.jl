@@ -6,6 +6,11 @@ using Test
 using Unitful
 
 @testset "Casacore.jl" begin
+    @testset "Aqua" begin
+        using Casacore, Aqua
+        Aqua.test_all(Casacore; ambiguities = false)
+    end
+
     @testset "Measures" begin
         @testset "Direction conversion J2000 to AZEL (and back again)" begin
             direction = Measures.Direction(Measures.Directions.J2000, (π)u"rad", π/2u"rad")

@@ -1,9 +1,9 @@
 module Dopplers
 
-using CEnum
+using CEnum: CEnum, @cenum
 using Unitful: Unitful as U, ustrip
 
-using ..Measures: AbstractMeasure, _setdata!, Converter
+using ..Measures: Measures, AbstractMeasure, _setdata!, Converter
 using ..LibCasacore
 
 @cenum Types begin
@@ -79,7 +79,7 @@ function Base.setproperty!(x::Doppler, name::Symbol, v)
     return nothing
 end
 
-function Converter(in::Types, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Types, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MDoppler!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
@@ -89,7 +89,7 @@ function Converter(in::Types, out::Types, measures::AbstractMeasure...)
     )
 end
 
-function Converter(in::Doppler, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Doppler, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MDoppler!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )

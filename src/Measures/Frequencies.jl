@@ -1,9 +1,9 @@
 module Frequencies
 
-using CEnum
+using CEnum: CEnum, @cenum
 using Unitful: Unitful as U, ustrip
 
-using ..Measures: AbstractMeasure, _setdata!, Converter
+using ..Measures: Measures, AbstractMeasure, _setdata!, Converter
 using ..LibCasacore
 
 @cenum Types begin
@@ -76,7 +76,7 @@ function Base.setproperty!(x::Frequency, name::Symbol, v)
     return nothing
 end
 
-function Converter(in::Types, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Types, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MFrequency!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
@@ -86,7 +86,7 @@ function Converter(in::Types, out::Types, measures::AbstractMeasure...)
     )
 end
 
-function Converter(in::Frequency, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Frequency, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MFrequency!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
