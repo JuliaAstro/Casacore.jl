@@ -3,7 +3,7 @@ module Positions
 using CEnum: CEnum, @cenum
 using Unitful: Unitful as U, ustrip
 
-using ..Measures: Measures, AbstractMeasure, _setdata!, Converter
+using ..Measures: AbstractMeasure, _setdata!, Converter
 using ..LibCasacore
 
 @cenum Types begin
@@ -128,7 +128,7 @@ function lat(d::Position)
     return asin(z / hypot(x, y, z)) * U.rad
 end
 
-function Measures.Converter(in::Types, out::Types, measures::AbstractMeasure...)
+function Converter(in::Types, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MPosition!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
@@ -138,7 +138,7 @@ function Measures.Converter(in::Types, out::Types, measures::AbstractMeasure...)
     )
 end
 
-function Measures.Converter(in::Position, out::Types, measures::AbstractMeasure...)
+function Converter(in::Position, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MPosition!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
