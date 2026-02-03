@@ -3,7 +3,7 @@ module Dopplers
 using CEnum
 using Unitful: Unitful as U, ustrip
 
-using ..Measures: AbstractMeasure, _setdata!, Converter
+using ..Measures: Measures, AbstractMeasure, _setdata!, Converter
 using ..LibCasacore
 
 @cenum Types begin
@@ -89,7 +89,7 @@ function Converter(in::Types, out::Types, measures::AbstractMeasure...)
     )
 end
 
-function Converter(in::Doppler, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Doppler, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MDoppler!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
