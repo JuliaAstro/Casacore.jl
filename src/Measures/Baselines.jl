@@ -3,7 +3,7 @@ module Baselines
 using CEnum: CEnum, @cenum
 using Unitful: Unitful as U, ustrip
 
-using ..Measures: AbstractMeasure, _setdata!, Converter
+using ..Measures: Measures, AbstractMeasure, _setdata!, Converter
 using ..LibCasacore
 
 @cenum Types begin
@@ -104,7 +104,7 @@ function Base.setproperty!(x::Baseline, name::Symbol, v)
     return nothing
 end
 
-function Converter(in::Types, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Types, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MBaseline!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
@@ -114,7 +114,7 @@ function Converter(in::Types, out::Types, measures::AbstractMeasure...)
     )
 end
 
-function Converter(in::Baseline, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Baseline, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MBaseline!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
