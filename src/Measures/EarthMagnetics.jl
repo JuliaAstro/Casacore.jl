@@ -3,7 +3,7 @@ module EarthMagnetics
 using CEnum: CEnum, @cenum
 using Unitful: Unitful as U, ustrip
 
-using ..Measures: Measures.AbstractMeasure, _setdata!, Converter
+using ..Measures: Measures, AbstractMeasure, _setdata!, Converter
 using ..LibCasacore
 
 @cenum Types begin
