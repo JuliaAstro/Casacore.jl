@@ -4,7 +4,10 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://juliaastro.github.io/Casacore.jl/dev)
 
 [![Test](https://github.com/JuliaAstro/Casacore.jl/actions/workflows/test.yml/badge.svg)](https://github.com/JuliaAstro/Casacore.jl/actions/workflows/test.yml)
+[![PkgEval](https://juliaci.github.io/NanosoldierReports/pkgeval_badges/C/Casacore.svg)](https://juliaci.github.io/NanosoldierReports/pkgeval_badges/report.html)
 [![Coverage](https://codecov.io/gh/juliaastro/Casacore.jl/graph/badge.svg)](https://codecov.io/gh/juliaastro/Casacore.jl)
+[![Aqua QA](https://raw.githubusercontent.com/JuliaTesting/Aqua.jl/master/badge.svg)](https://github.com/JuliaTesting/Aqua.jl)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This package provides a Julia interface to the National Radio Astronomy Observatory (NRAO) casacore C++ library.
 
