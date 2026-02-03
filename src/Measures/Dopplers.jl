@@ -79,7 +79,7 @@ function Base.setproperty!(x::Doppler, name::Symbol, v)
     return nothing
 end
 
-function Converter(in::Types, out::Types, measures::AbstractMeasure...)
+function Measures.Converter(in::Types, out::Types, measures::AbstractMeasure...)
     ref = LibCasacore.MDoppler!Ref(
         Int(out), LibCasacore.MeasFrame((m.m for m in measures)...)
     )
