@@ -3,7 +3,7 @@ uuid = "72bb1062-94f5-49fa-bb69-94b615203ad9"
 repo = "https://github.com/JuliaAstro/Casacore.jl.git"
 authors = ["Torrance Hodgson <torrance@pravic.xyz>", "Kiran Shila <me@kiranshila.com>",
            "Fergus Baker <fergus@cosroe.com>", "Paul Barrett <pebarrett@gmail.com>"]
-version = "0.4.0"
+version = "0.4.1"
 
 [workspace]
 projects = ["test", "docs"]
