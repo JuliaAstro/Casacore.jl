@@ -6,7 +6,7 @@ authors = ["Torrance Hodgson <torrance@pravic.xyz>", "Kiran Shila <me@kiranshila
 version = "0.4.0"
 
 [workspace]
-projects = ["test"]
+projects = ["test", "docs"]
 
 [deps]
 CEnum = "fa961155-64e5-5f13-b03f-caf6b980ea82"
