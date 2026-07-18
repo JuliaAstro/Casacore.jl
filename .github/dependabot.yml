@@ -8,7 +8,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    groups: # uncomment to group all julia package updates into a single PR
+    ignore:
+      - dependency-name: "Casacore" # Ignore package itself
+    groups: # group all julia package updates into a single PR
       all-julia-packages:
         patterns:
           - "*"
